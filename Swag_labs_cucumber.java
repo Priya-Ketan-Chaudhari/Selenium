@@ -9,13 +9,14 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class swag_labs_Steps
 {
-	public WebDriver driver= new ChromeDriver();
+	public WebDriver driver= new ChromeDriver(); //public WebDriver driver= null;
 	String driverpath="/usr/bin/chromedriver";
 	String baseurl="https://www.saucedemo.com/inventory.html";
 	
 	@Given("open login page to the user")
 	public void open_login_page_to_the_user() throws InterruptedException
-	{System.out.println("User is on login page now");
+	{System.out.println("User is on login page now");//System.setProperty("webdriver.chrome.driver","/home/am-pc-37/Downloads/chromedriver_linux64/chromedriver");
+		                                         //driver=new ChromeDriver();
 	driver.get("https://www.saucedemo.com/");
 	Thread.sleep(2000);}
 	
