@@ -1,5 +1,4 @@
 package eSign;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,16 +14,17 @@ public class eSing_testng
 	
 	 @BeforeTest
 	 public void LaunchBrowser() throws InterruptedException
-	 {   System.out.println("Launch chrome browser");
-	     System.setProperty("webdriver.chrome.driver",driverpath);
-	     d=new ChromeDriver();
+	 {   
+		 System.out.println("Launch chrome browser");
+	         System.setProperty("webdriver.chrome.driver",driverpath);
+	         d=new ChromeDriver();
 	 }
 	    
 	     
 	     @Test
 	     public void eSing_Testng() throws InterruptedException
 	     {
-	     d.get("https://app.documentesign.com/auth/login");
+	                d.get("https://app.documentesign.com/auth/login");
 			Thread.sleep(3000);
 			d.findElement(By.xpath("//body/app-root[1]/layout-auth[1]/app-login[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/input[1]")).sendKeys("priya@angularminds.in");
 			Thread.sleep(2000);
@@ -53,25 +53,26 @@ public class eSing_testng
 			Thread.sleep(3000);
 			d.findElement(By.xpath("//body/app-root[1]/layout-auth[1]/app-request-sign-wizard[1]/div[1]/div[2]/app-step-three[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-document-editor[1]/div[1]/div[1]/div[1]/div[1]/div[1]/app-placeholder-field-type[1]/div[1]/div[1]/div[1]/div[2]/a[1]")).click();   
 			Thread.sleep(3000);
-		    d.findElement(By.xpath("//body/modal-container[1]/div[1]/div[1]/app-choose-placeholder[1]/div[1]/form[1]/div[1]/ng-select[1]/div[1]/div[1]/div[2]/input[1]")).click();
-		    Thread.sleep(5000);
-		    d.findElement(By.xpath("//body/modal-container[1]/div[1]/div[1]/app-choose-placeholder[1]/div[1]/form[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]")).click();
-		    Thread.sleep(3000);
-		    d.findElement(By.xpath("//span[contains(text(),'Review request')]")).click();
-		    Thread.sleep(3000);
-		    d.findElement(By.xpath("//body/app-root[1]/layout-auth[1]/app-request-sign-wizard[1]/div[1]/div[2]/app-step-four[1]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[2]/am-button[2]/button[1]")).click();
-		    Thread.sleep(3000);	
-	        d.findElement(By.xpath("//body/app-root[1]/layout-auth[1]/app-step-five[1]/div[1]/div[1]/div[1]/button[1]")).click();
-	        Thread.sleep(3000);	
-		    d.findElement(By.xpath("//div[contains(text(),'P')]")).click();
-		    Thread.sleep(3000);
-		    d.findElement(By.xpath("//body/app-root[1]/layout-app[1]/am-topbar[1]/nav[1]/div[1]/div[3]/div[1]/a[6]")).click();
+		        d.findElement(By.xpath("//body/modal-container[1]/div[1]/div[1]/app-choose-placeholder[1]/div[1]/form[1]/div[1]/ng-select[1]/div[1]/div[1]/div[2]/input[1]")).click();
+		        Thread.sleep(5000);
+		        d.findElement(By.xpath("//body/modal-container[1]/div[1]/div[1]/app-choose-placeholder[1]/div[1]/form[1]/div[1]/ng-select[1]/ng-dropdown-panel[1]/div[1]")).click();
+		        Thread.sleep(3000);
+		        d.findElement(By.xpath("//span[contains(text(),'Review request')]")).click();
+		        Thread.sleep(3000);
+		        d.findElement(By.xpath("//body/app-root[1]/layout-auth[1]/app-request-sign-wizard[1]/div[1]/div[2]/app-step-four[1]/div[1]/div[1]/div[1]/form[1]/div[3]/div[1]/div[2]/am-button[2]/button[1]")).click();
+		        Thread.sleep(3000);	
+	                d.findElement(By.xpath("//body/app-root[1]/layout-auth[1]/app-step-five[1]/div[1]/div[1]/div[1]/button[1]")).click();
+	                Thread.sleep(3000);	
+		        d.findElement(By.xpath("//div[contains(text(),'P')]")).click();
+		        Thread.sleep(3000);
+		        d.findElement(By.xpath("//body/app-root[1]/layout-app[1]/am-topbar[1]/nav[1]/div[1]/div[3]/div[1]/a[6]")).click();
 	     }
 		    @AfterTest
 		    public void logout() throws InterruptedException
 		    {
-		    Thread.sleep(3000);
-		    d.quit();
+			    
+		           Thread.sleep(3000);
+		            d.quit();
 		    }
 		
 	
